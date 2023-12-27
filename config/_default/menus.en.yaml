@@ -38,6 +38,6 @@ main:
 # the copyright notice. Configure as per the main menu above.
 
 # footer:
-#   - name: "Tags"
-#     pageRef: "tags"
+#   - name: "Imprint"
+#     pageRef: "Imprint"
 #     weight: 10

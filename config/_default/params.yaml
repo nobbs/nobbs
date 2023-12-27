@@ -47,7 +47,7 @@ article:
   showPagination: true
   invertPagination: false
   showReadingTime: false
-  showTableOfContents: flase
+  showTableOfContents: false
   showTaxonomies: false
   showWordCount: false
   showComments: false
