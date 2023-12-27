@@ -11,7 +11,7 @@ author: &author
   image: "images/author.webp"
   headline: All around DevSecOps guy, rambling on about stuff.
   bio: |-
-    Kubernetes Platform Engineer at [DHL IT Services](https://group.dhl.com/en/about-us/corporate-divisions/it-services.html), living in the world of Kubernetes and Cloud Native technologies. DevSecOps enthusiast with a knack for automation, powered by a background in Mathematics and Numerical Analysis.
+    Kubernetes Platform Engineer, currently at [**DHL IT Services**](https://group.dhl.com/en/about-us/corporate-divisions/it-services.html), living in the world of Kubernetes and Cloud Native technologies. DevSecOps enthusiast with a knack for automation, powered by a background in Mathematics and Numerical Analysis.
   links:
     - email: "mailto:alex@nobbs.dev"
     - github: "https://github.com/nobbs"

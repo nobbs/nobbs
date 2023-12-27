@@ -1,0 +1,7 @@
+.max-w-prose {
+  max-width: 80ch;
+}
+
+.gist table tr {
+  border-bottom: none;
+}

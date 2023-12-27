@@ -26,7 +26,7 @@ header:
 footer:
   showCopyright: true
   showThemeAttribution: true
-  showAppearanceSwitcher: false
+  showAppearanceSwitcher: true
   showScrollToTop: true
 
 homepage:
@@ -47,7 +47,7 @@ article:
   showPagination: true
   invertPagination: false
   showReadingTime: false
-  showTableOfContents: false
+  showTableOfContents: flase
   showTaxonomies: false
   showWordCount: false
   showComments: false
@@ -55,7 +55,7 @@ article:
 
 list:
   showBreadcrumbs: false
-  showSummary: false
+  showSummary: true
   showTableOfContents: false
   showTaxonomies: false
   groupByYear: true
