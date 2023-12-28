@@ -2,6 +2,7 @@
 title: Reverse-Engineering the MapR Ticket format
 slug: reverse-engineering-mapr-ticket-format
 date: 2023-12-26T22:19:21+01:00
+lastmod: 2023-12-28
 
 description: |-
     Detailed write-up on how to reverse-engineer the MapR ticket format, reconstruct the protobuf definition, and write a simple proof of concept to parse MapR tickets in Python.
@@ -504,6 +505,10 @@ Even better, we can use this as a base to create a simple custom Kubernetes cont
 
 This will be released as a separate project in the future, so stay tuned for that.
 
-## Summary
+## Conclusion
 
 In short, all of this was mostly possible because Java - or at least the `jar` files as used by MapR - can be decompiled into perfectly readable code. Everything else was just a matter of following the code and figuring out how the data was encoded and encrypted. The only thing that was a bit of a hassle was the protobuf definition, but even that was possible to reconstruct with a bit of effort.
+
+{{< alert "link" >}}
+A Go module implementing the encode and decode functionality for MapR tickets is available at [GitHub](https://github.com/nobbs/mapr-ticket-parser) and [GoDoc](https://pkg.go.dev/github.com/nobbs/mapr-ticket-parser).
+{{< /alert >}}
