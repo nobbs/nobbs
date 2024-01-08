@@ -1,12 +1,24 @@
 ---
-draft: false
 title: sudo with Touch ID in macOS Sonoma
-summary: >
-  For whatever reason, Touch ID approval for `sudo` commands is not enabled by default in macOS. Fortunately, it's easy to change that.
+slug: sudo-touch-id-mac-sonoma
+aliases:
+  - /posts/2013-12-sudo-touch-id-mac-sonoma/
 date: 2023-12-26
+modified: 2024-01-08
+
+description: |-
+  For whatever reason, Touch ID approval for `sudo` commands is not enabled by default in macOS. Fortunately, it's easy to change that.
+summary: |-
+  For whatever reason, Touch ID approval for `sudo` commands is not enabled by default in macOS. Fortunately, it's easy to change that.
+
 tags:
   - macos
   - sonoma
+
+draft: false
+showReadingTime: true
+
+coverCaption: Created with [Bing Create](https://bing.com/create).
 ---
 
 Enabling Touch ID for `sudo` commands hasn't changed much since at least Big Sur - with the introduction of macOS Sonoma, Apple [made it even easier](https://support.apple.com/kb/HT213893) to make it a persistent setting.

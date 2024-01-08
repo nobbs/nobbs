@@ -9,9 +9,6 @@ description: |-
 summary: |-
   A write-up of my experience building a Kubectl plugin with Go using the `cobra`, `cli-runtime`, and `client-go` libraries for the first time.
 
-categories:
-  - Kubernetes
-
 tags:
   - mapr
   - kubernetes

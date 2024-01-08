@@ -9,9 +9,6 @@ description: |-
 summary: |-
     Write-up on how to reverse-engineer the MapR ticket format, reconstruct the protobuf definition, and write a simple proof of concept to parse MapR tickets in Python.
 
-categories:
-  - Kubernetes
-
 tags:
   - mapr
   - kubernetes
