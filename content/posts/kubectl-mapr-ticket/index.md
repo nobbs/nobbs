@@ -2,11 +2,12 @@
 title: Kubectl Plugins - Building a `kubectl`-like CLI with Go
 slug: kubectl-mapr-ticket
 date: 2024-01-07
+lastmod: 2024-01-08
 
 description: |-
-  A write-up on creating a Kubectl plugin to work with MapR tickets from the point of view of a devops guy writing his first Kubectl plugin.
+  A write-up of my experience building a Kubectl plugin with Go using the `cobra`, `cli-runtime`, and `client-go` libraries for the first time.
 summary: |-
-  A write-up on creating a Kubectl plugin to work with MapR tickets from the point of view of a devops guy writing his first Kubectl plugin.
+  A write-up of my experience building a Kubectl plugin with Go using the `cobra`, `cli-runtime`, and `client-go` libraries for the first time.
 
 categories:
   - Kubernetes
@@ -30,7 +31,7 @@ This post will not go too much into the details of the plugin itself but rather 
 
 ## What is a Kubectl Plugin?
 
-[Kubectl](https://kubernetes.io/docs/reference/kubectl/) is the official command-line tool to interact with the control plane of a Kubernetes cluster. It is a very powerful tool and probably the most important tool in the Kubernetes ecosystem for developers and operators alike.
+[Kubectl](https://kubernetes.io/docs/reference/kubectl/) is the official command-line interface (CLI) tool to interact with the control plane of a Kubernetes cluster. It is a very powerful tool and probably the most important tool in the Kubernetes ecosystem for developers and operators alike.
 
 Kubectl provides an [official plugin mechanism](https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/) that allows developers to extend the functionality of it. Plugins can be written in any language as they are just executables starting with `kubectl-` that have to be placed somewhere in the `PATH` of the user. Kubectl will automatically find and execute these plugins when the user runs `kubectl <plugin-name>` passing all the arguments and flags to the plugin.
 
@@ -81,13 +82,13 @@ Other languages can be used as well, as the only requirement is that the plugin 
 
 Most of the Go-based Kubectl plugins out there make use of the following libraries:
 
-- [cobra](https://github.com/spf13/cobra) for creating the CLI interface - it is the same library that Kubectl itself uses
+- [cobra](https://github.com/spf13/cobra) for creating the CLI - it is the same library that Kubectl itself uses
 - [client-go](https://github.com/kubernetes/client-go) for interacting with the Kubernetes API - that's the official Kubernetes client library
 - [cli-runtime](https://github.com/kubernetes/cli-runtime) providing various helpers and utilities for writing Kubectl plugins to keep them consistent with the usual `kubectl` behavior
 
 ### The Cobra CLI Framework
 
-Cobra is a very powerful CLI framework for Go and probably the most popular one. It is used by Kubectl itself and many other CLI tools in the Kubernetes ecosystem. It provides a very simple and intuitive way to create a CLI interface with subcommands, flags, and arguments. Even shell autocompletion can be implemented with just a few lines of code.
+Cobra is a very powerful CLI framework for Go and probably the most popular one. It is used by Kubectl itself and many other CLI tools in the Kubernetes ecosystem. It provides a very simple and intuitive way to create a CLI with subcommands, flags, and arguments. Even shell autocompletion can be implemented with just a few lines of code.
 
 Creating a basic `root` command with Cobra is as simple as this:
 
@@ -147,7 +148,7 @@ some information about them.`,
 rootCmd.AddCommand(listCmd)
 ```
 
-There is still no functionality to any of the commands, but we already have a nice CLI interface with a `root` command and a `list` subcommand. Running the code will result in the following output:
+There is still no functionality to any of the commands, but we already have a nice CLI with a `root` command and a `list` subcommand. Running the code will result in the following output:
 
 ```console
 $ go run main.go
@@ -184,7 +185,7 @@ Flags:
 
 #### Adding Flags
 
-Right, we haven't done much yet, but we already have a nice CLI interface. Let's add some flags to the `list` command to make it a bit more useful. Let's add a `--all-namespaces` flag that will allow us to list MapR tickets in all namespaces instead of just the one of the current context. Again, very simple, let's add it in line 29 of the above code snippet:
+Right, we haven't done much yet, but we already have a nice CLI. Let's add some flags to the `list` command to make it a bit more useful. Let's add a `--all-namespaces` flag that will allow us to list MapR tickets in all namespaces instead of just the one of the current context. Again, very simple, let's add it in line 29 of the above code snippet:
 
 ```go {linenos=table,linenostart=29}
 listOptions := &struct {
@@ -228,7 +229,7 @@ All very nice - you quickly get a feeling for how easy it is to create a CLI wit
 
 ### cli-runtime
 
-Great, we now know how to create a basic CLI interface with Cobra. You could start implementing all the options available to all `kubectl` commands, like `--kubeconfig`, `--context`, `--namespace`, etc. But that would be a lot of work and we would have to reimplement a lot of functionality that is already available in the `kubectl` CLI. That's where the `cli-runtime` library comes into play.
+Great, we now know how to create a basic CLI with Cobra. You could start implementing all the options available to all `kubectl` commands, like `--kubeconfig`, `--context`, `--namespace`, etc. But that would be a lot of work and we would have to reimplement a lot of functionality that is already available in the `kubectl` CLI. That's where the `cli-runtime` library comes into play.
 
 The library provides a bunch of helpers for building `kubectl`-like CLIs. It provides functionality for setting up a default set of flags, as well as methods for printing output in a `kubectl`-like way, i.e. tables, JSON, YAML, etc. We will use the `cli-runtime` library to add the default set of `kubectl` to all our commands. To do so, we simply have to add the following code to our `root` command, e.g. right after the `rootCmd.AddCommand(listCmd)` call:
 
