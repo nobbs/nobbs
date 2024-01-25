@@ -6,6 +6,7 @@ showDate: false
 showAuthor: false
 showBreadCrumbs: false
 showTableOfContents: false
+showWordCount: false
 ---
 
 ## Information in accordance with section 5 TMG
