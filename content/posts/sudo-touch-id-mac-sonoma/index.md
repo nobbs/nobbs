@@ -16,9 +16,6 @@ tags:
   - sonoma
 
 draft: false
-showReadingTime: true
-
-coverCaption: Created with [Bing Create](https://bing.com/create).
 ---
 
 Enabling Touch ID for `sudo` commands hasn't changed much since at least Big Sur - with the introduction of macOS Sonoma, Apple [made it even easier](https://support.apple.com/kb/HT213893) to make it a persistent setting.

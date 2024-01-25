@@ -16,9 +16,6 @@ tags:
   - go
 
 draft: false
-showReadingTime: true
-
-coverCaption: Created with [Bing Create](https://bing.com/create).
 ---
 
 The motivation behind this article was my interest in developing a Kubectl plugin for handling MapR tickets, leveraging the [reverse-engineered MapR ticket format]({{< ref "/posts/reverse-engineering-mapr-ticket-format" >}}) I discussed in an earlier post.

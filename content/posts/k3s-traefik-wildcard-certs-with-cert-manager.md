@@ -1,13 +1,20 @@
 ---
-draft: true
 title: Wildcard Let's Encrypt certificates with Traefik and k3s
+slug: wildcard-lets-encrypt-certificates-with-traefik-and-k3s
 date: 2021-12-15T00:07:25+01:00
-summary: >
+lastmod: 2023-12-22T00:07:25+01:00
+
+description: |-
   **tl;dr.** Learn how to use wildcard certificates issued with cert-manager and Let's Encrypt with K3s and its standard ingress controller Traefik v2 with as little effort as possible.
+summary: |-
+  **tl;dr.** Learn how to use wildcard certificates issued with cert-manager and Let's Encrypt with K3s and its standard ingress controller Traefik v2 with as little effort as possible.
+
 tags:
-- traefik
-- k3s
-- lets encrypt
+  - traefik
+  - k3s
+  - lets encrypt
+
+draft: false
 ---
 
 {{< alert >}}
@@ -30,7 +37,7 @@ A subset of the running applications should also be accessible from the Internet
 
 The conventional approach would be to add annotations to each `Ingress` object, so that cert-manager gets its own certificate for each of the subdomains - unfortunately, from a privacy point of view, this is not the optimal solution for my use case, since publicly available Certificate Transparency Logs, such as [Crt.sh](https://crt.sh/?q=k3s.nobbs.eu), "leak" all subdomains with Let's Encrypt certificates - whether used internally or externally. Not a major problem, but then again, not everyone needs to be able to see which services I try out or run internally.
 
-A wildcard certificate for `*.k3s.nobbs.eu` remedies the problem, but how do you configure K3s and [Traefik](https://traefik.io/) to make this work? *Here I would like to refer to the post by [Lachlan Mitchell](https://lachlan.io/blog/using-wildcard-certificates-with-traefik-and-k3s) - who describes therein the process for Traefik v1 and first made me think of the implementation in Traefik v2.
+A wildcard certificate for `*.k3s.nobbs.eu` remedies the problem, but how do you configure K3s and [Traefik](https://traefik.io/) to make this work? \*Here I would like to refer to the post by [Lachlan Mitchell](https://lachlan.io/blog/using-wildcard-certificates-with-traefik-and-k3s) - who describes therein the process for Traefik v1 and first made me think of the implementation in Traefik v2.
 
 ## Solution
 

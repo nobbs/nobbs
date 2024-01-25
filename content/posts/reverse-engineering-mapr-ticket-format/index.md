@@ -16,9 +16,6 @@ tags:
   - security
 
 draft: false
-showReadingTime: true
-
-coverCaption: "Photo by [Joe Yates](https://unsplash.com/@josephyates_) on [Unsplash](https://unsplash.com)"
 ---
 
 {{< alert >}}
