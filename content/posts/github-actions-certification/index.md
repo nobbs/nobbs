@@ -1,7 +1,6 @@
 ---
 title: "Taking the Github Actions Certification Exam"
-date: 2024-02-02T22:05:24+01:00
-draft: true
+date: 2024-02-02T22:43:00+01:00
 
 description: |
   My experience with the Github Actions Certification.
@@ -48,13 +47,23 @@ The following resources were helpful for me, even though I did not spend much ti
 
 ## My experience with the exam
 
-As the next local testing center is at least half an hour away, I opted for the online proctored exam option. As is usual for these kinds of exams, special exam software needs to be installed on the computer and the exam is proctored via webcam and microphone. Nothing out of the ordinary here, but might be a bit of a hassle if you're not used to it.
+As the next local testing center is at least half an hour away, I opted for the online proctored exam option. As is usual for these kinds of exams, special exam software needs to be installed on the computer and the exam is proctored via webcam and microphone. Nothing out of the ordinary here, but might be a bit of a hassle if you're not used to it. All in all a smooth experience.
 
-I took the exam on an early Friday afternoon and finished it in about XX minutes out of the allotted 120 minutes. The exam itself was quite straightforward. The questions were not too tricky, and I did not feel like I was being tricked into answering something wrong.
+I took the exam on an early Friday afternoon and finished it in **about 27 minutes** out of the allotted 120 minutes. The exam itself was quite straightforward. The questions were not too tricky, and I did not feel like I was being tricked into answering something wrong; most of the time.
+
+{{<
+  figure
+  src="certification.webp"
+  alt="GitHub Actions Certification"
+  caption="My final score was 55 out of 60 questions. During the exam, I did not expect to do that well."
+  class="rounded-lg"
+>}}
 
 ### Was it worth it?
 
-_Probably, who knows?_ While I did not get much out of the exam itself, I did not spend much time studying for it either. Your mileage may vary. If you're new to GitHub Actions, it might be a good way to get a good understanding of the topic and its ecosystem. And you get a Credly badge to brag about on LinkedIn, so that's something, I guess. :medal_military:
+Probably, who knows? Hard to say.
+
+While I did not get much out of the exam itself, I did not spend much time studying for it either. Your mileage may vary. If you're new to GitHub Actions, it might be a good way to get a good understanding of the topic and its ecosystem. And you get a Credly badge to brag about on LinkedIn, so that's something, I guess. :medal_military:
 
 [announcement]: https://github.blog/2024-01-08-github-certifications-are-generally-available/ "GitHub Certifications are generally available"
 [foundations]: https://learn.microsoft.com/en-us/collections/o1njfe825p602p "GitHub Foundations Certification"
